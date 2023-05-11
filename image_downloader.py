@@ -1,26 +1,33 @@
 from simple_image_download import simple_image_download as simp
 import argparse
 import os
+import colorama
+
+# Initialize colorama
+colorama.init()
+
 
 # Function to clear the terminal
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+
 # Function to print colorized text
 def print_colorized(text, color):
     colors = {
-        'black': '\033[30m',
-        'red': '\033[31m',
-        'green': '\033[32m',
-        'yellow': '\033[33m',
-        'blue': '\033[34m',
-        'magenta': '\033[35m',
-        'cyan': '\033[36m',
-        'white': '\033[37m',
-        'reset': '\033[0m'
+        'black': colorama.Fore.BLACK,
+        'red': colorama.Fore.RED,
+        'green': colorama.Fore.GREEN,
+        'yellow': colorama.Fore.YELLOW,
+        'blue': colorama.Fore.BLUE,
+        'magenta': colorama.Fore.MAGENTA,
+        'cyan': colorama.Fore.CYAN,
+        'white': colorama.Fore.WHITE,
+        'reset': colorama.Style.RESET_ALL
     }
     color_code = colors.get(color, colors['reset'])
     print(f'{color_code}{text}{colors["reset"]}')
+
 
 # Clear the terminal
 clear_terminal()
@@ -65,7 +72,7 @@ clear_terminal()
 
 # Colorize the usage output
 usage = parser.format_usage()
-usage = usage.replace('usage:', print_colorized('usage:', 'yellow'))
+usage = usage.replace('usage:', f'{colorama.Fore.YELLOW}usage:{colorama.Style.RESET_ALL}')
 
 # Print the colorized usage output
 print(usage)
