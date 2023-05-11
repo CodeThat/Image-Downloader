@@ -6,20 +6,21 @@ This script allows you to download images from Google Images or scrape URLs of t
 
 - Python 3.x
 - pip
+- simple_image_downloader
 
 ## Installation
 
 1. Clone the repository:
 
-  ```git clone https://github.com/your_username/your_repository.git```
+    ```git clone https://github.com/your_username/your_repository.git```
 
 2. Navigate to the project directory:
 
-  ```cd your_repository```
+    ```cd your_repository```
 
 3. Install the required dependencies:
 
-  ```pip install -r requirements.txt```
+    ```pip install -r requirements.txt```
   
 # Usage
 ```python image_downloader.py -k keyword1 keyword2 -n num_images```
