@@ -4,8 +4,7 @@ import os
 import colorama
 
 # Initialize colorama
-colorama.init()
-
+colorama.init(autoreset=True)
 
 # Function to clear the terminal
 def clear_terminal():
@@ -23,10 +22,9 @@ def print_colorized(text, color):
         'magenta': colorama.Fore.MAGENTA,
         'cyan': colorama.Fore.CYAN,
         'white': colorama.Fore.WHITE,
-        'reset': colorama.Style.RESET_ALL
     }
     color_code = colors.get(color, colors['reset'])
-    print(f'{color_code}{text}{colors["reset"]}')
+    print(f'{color_code}{text}')
 
 
 # Clear the terminal
@@ -72,7 +70,7 @@ clear_terminal()
 
 # Colorize the usage output
 usage = parser.format_usage()
-usage = usage.replace('usage:', f'{colorama.Fore.YELLOW}usage:{colorama.Style.RESET_ALL}')
+usage = usage.replace('usage:', f'{colorama.Fore.YELLOW}usage:')
 
 # Print the colorized usage output
 print(usage)
@@ -89,3 +87,4 @@ else:
         response().search_urls(' '.join(args.keywords), limit=args.num_images)
         for url in response().cache:
             print_colorized(url, 'green')
+
