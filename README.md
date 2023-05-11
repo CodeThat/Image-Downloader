@@ -1,4 +1,4 @@
-# Google Images Downloader
+# Images Downloader
 
 This script allows you to download images from Google Images or scrape URLs of the images based on keywords and other options.
 
