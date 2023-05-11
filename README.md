@@ -45,19 +45,7 @@ Replace keyword1 and keyword2 with your desired keywords and num_images with the
   ```python image_downloader.py -k car -n 20 -s images```
   
 # License
-This project is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/c/LICENSE) file for details
-
-```
-
-Replace `your_username` and `your_repository` with your actual GitHub username and repository name. Adjust the content as needed to match your specific project structure and requirements.
-
-Make sure to include the `requirements.txt` file in your repository, which lists the required dependencies.
-
-Feel free to customize the readme further according to your preferences and project details.
-
-Let me know if you need any further assistance!
-```
-
+This project is licensed under the MIT License.
 
 
 
